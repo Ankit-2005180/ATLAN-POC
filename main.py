@@ -524,7 +524,7 @@ class SparkDataProcessing:
     def auditLogging(self,*args):
         try:
             filepath = self.pathdetails.get("AUDITLOG", "NA")
-            time = strftime(now.strftime("%d-%m-%Y_%H%M%S"))
+            time = strftime(now.strftime("%d-%m-%Y %H:%M:%S"))
             with open(filepath, 'a') as fileObj:
                 fileObj.write('Time  : ' + time + ' ')
                 fileObj.write('Error Description : ' + ''.join(args) + '\n')
