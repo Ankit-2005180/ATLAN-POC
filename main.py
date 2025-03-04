@@ -8,7 +8,7 @@ from time import strftime
 now = datetime.now()
 
 class SparkDataProcessing:
-    def __init__(self, app_name="ATLAN-S4-HANA"):
+    def __init__(self, app_name="ATLAN"):
         with open(r"D:\pyspark\Project\PythonProject\PythonProject\AtlanS4HANA\files\FILEPATH_DETAILS.json") as fileObj:
             self.pathdetails = json.load(fileObj)
 
