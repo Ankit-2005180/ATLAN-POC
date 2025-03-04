@@ -442,7 +442,7 @@ class SparkDataProcessing:
                 return self.DF14T_df
 
             case "TF_DD03T":
-                TF_DD03T_schema = self.getSchema("TFDD03T")
+                TF_DD03T_schema = self.getSchema("TF_DD03T")
                 self.TF_DD03T_df = self.spark.read.format(file_format) \
                     .option("inferSchema", True) \
                     .option("Header", header) \
@@ -453,7 +453,7 @@ class SparkDataProcessing:
                 return self.TF_DD03T_df
 
             case "TF_DD04T":
-                TF_DD04T_schema = self.getSchema("TFDD04T")
+                TF_DD04T_schema = self.getSchema("TF_DD04T")
                 self.TF_DD04T_df = self.spark.read.format(file_format) \
                     .option("inferSchema", True) \
                     .option("Header", header) \
@@ -465,7 +465,7 @@ class SparkDataProcessing:
 
 
             case _:
-                raise Exception(f"Enter Valid File Name : {filename}")
+                raise Exception(f"Error occurred while reading the File : {filename}")
 
     def writeData(self, output_path, output_format="json"):
 
