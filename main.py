@@ -472,11 +472,11 @@ class SparkDataProcessing:
 
         if '/' in output_path:
             x = output_path.split('/')
-            print("Linux Path: ",output_path)
+            print("Output Linux Path: ",output_path)
         else:
             x = output_path.split('\\')
         filename = x[-1].split('.')[0]
-        print("Windows Path : ",output_path)
+        print("Output Windows Path : ",output_path)
 
         match filename:
 
