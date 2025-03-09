@@ -8,8 +8,8 @@ from time import strftime
 now = datetime.now()
 
 class SparkDataProcessing:
-    def __init__(self, app_name="ATLAN"):
-        with open(r"D:\pyspark\Project\PythonProject\PythonProject\AtlanS4HANA\files\FILEPATH_DETAILS.json") as fileObj:
+    def __init__(self, app_name="ATLANS4HANA"):
+        with open(r"D:\pyspark\Project\PythonProject\PythonProject\AtlanS4HANA\files\S4HANA_FILEPATH_DETAILS.json") as fileObj:
             self.pathdetails = json.load(fileObj)
 
         self.spark = SparkSession.builder.appName(app_name).getOrCreate()
@@ -219,6 +219,7 @@ class SparkDataProcessing:
     def readData(self,filename, file_format="csv", header=False, delimiter=";"):
 
         filepath = self.pathdetails.get(filename,"NA")
+        print("Read Data : ",filepath)
         match filename:
             case "TABLE":
                 tableFile_schema = self.getSchema("TABLE")
@@ -471,9 +472,11 @@ class SparkDataProcessing:
 
         if '/' in output_path:
             x = output_path.split('/')
+            print("Linux Path: ",output_path)
         else:
             x = output_path.split('\\')
         filename = x[-1].split('.')[0]
+        print("Windows Path : ",output_path)
 
         match filename:
 
@@ -488,33 +491,33 @@ class SparkDataProcessing:
                 print(f"Data written to {output_path}")
 
             case "ViewNameText_Merged":
-                self.FinalViewNameText_df = self.column()
+                self.FinalViewNameText_df = self.viewNameText()
                 self.FinalViewNameText_df.coalesce(1).write.format(output_format).mode("overwrite").save(output_path)
                 print(f"Data written to {output_path}")
 
             case "ViewFieldMapping_Merged":
-                self.viewFieldMapping_df = self.column()
+                self.viewFieldMapping_df = self.viewField()
                 self.viewFieldMapping_df.coalesce(1).write.format(output_format).mode("overwrite").save(output_path)
                 print(f"Data written to {output_path}")
 
             case "ViewJoinCondition_Merged":
-                self.ViewJoinCondition_df = self.column()
+                self.ViewJoinCondition_df = self.viewJoin()
                 self.ViewJoinCondition_df.coalesce(1).write.format(output_format).mode("overwrite").save(output_path)
                 print(f"Data written to {output_path}")
 
             case "ABAPProgramDesc_Merged":
-                self.ABAPProgramDesc_df = self.column()
+                self.ABAPProgramDesc_df = self.abapProgDesc()
                 self.ABAPProgramDesc_df.coalesce(1).write.format(output_format).mode("overwrite").save(output_path)
                 print(f"Data written to {output_path}")
 
             case "TCodeText_Merged":
-                self.TCodeText_df = self.column()
+                self.TCodeText_df = self.tcodeTcodeText()
                 self.TCodeText_df.coalesce(1).write.format(output_format).mode("overwrite").save(output_path)
                 print(f"Data written to {output_path}")
 
 
             case "FunctionModules_Merged":
-                self.FinalFunctionModule = self.column()
+                self.FinalFunctionModule = self.functionModule()
                 self.FinalFunctionModule.coalesce(1).write.format(output_format).mode("overwrite").save(output_path)
                 print(f"Data written to {output_path}")
 
@@ -839,7 +842,7 @@ if __name__ == '__main__':
 
     try:
         processor = SparkDataProcessing()
-        # processor.writeData("D:\pyspark\Project\PythonProject\Spark_Lesson\curated\Tables_Merged.json")
+        # processor.writeData("D:\pyspark\Project\PythonProject\PythonProject\AtlanS4HANA\curatedS4HANA\Table_Merged.json")
 
         if len(sys.argv) > 1:
             processor.writeData(sys.argv[1])
@@ -849,5 +852,6 @@ if __name__ == '__main__':
 
 
     except Exception as e:
+        print("Exception Occurred from : ",e.__class__.__name__)
         print("Exception Occurred : ",e)
         processor.auditLogging(str(e))

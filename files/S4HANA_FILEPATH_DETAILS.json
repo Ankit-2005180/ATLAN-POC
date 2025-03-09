@@ -1,0 +1,26 @@
+{
+    "CVERS_REF": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\CVERS_REF.csv",
+    "DF14L": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\DF14L.csv",
+    "DF14T": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\DF14T.csv",
+    "PACKAGE": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\PACKAGE.csv",
+    "TABLE": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TABLE.csv",
+    "TABLE_DESC": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TABLE_DESC.csv",
+    "TABLE_FIELDS": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TABLE_FIELDS.csv",
+    "TDEVC": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TDEVC.csv",
+    "TF_DD03T": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TF_DD03T.csv",
+    "TF_DD04T": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TF_DD04T.csv",
+    "VIEW_FIELDMAPPING": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\VIEW_FIELDMAPPING.csv",
+    "VIEW_JOINCONDITION": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\VIEW_JOINCONDITION.csv",
+    "VIEW_NAME": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\VIEW_NAME.csv",
+    "VIEW_TEXT": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\VIEW_TEXT.csv",
+    "TCODE_TEXT": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TCODE_TEXT.csv",
+    "TCODE": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\TCODE.csv",
+    "ABAP_PROGRAM": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\ABAP_PROGRAM.csv",
+    "ABAP_DESCRIPTION": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\ABAP_DESCRIPTION.csv",
+    "FUNC_TEXT": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\FUNC_TEXT.csv",
+    "FUNC_MODULES": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\FUNC_MODULES.csv",
+    "FUNC_PARAMETER": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\FUNC_PARAMETER.csv",
+    "FUNC_PARAMETER_STEXT": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\rawS4HANA\\FUNC_PARAMETER_STEXT.csv",
+    "AUDITLOG": "D:\\pyspark\\Project\\PythonProject\\PythonProject\\AtlanS4HANA\\auditlog\\Error_File.txt"
+
+}
